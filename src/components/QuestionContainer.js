@@ -32,7 +32,8 @@ class QuestionContainer extends Component {
 function mapStateToProps({ questions, authedUser, users }) {
     const user = users[authedUser];
     const answeredIds = user ? Object.keys(user['answers']) : [];
-    const unansweredIds = Object.keys(questions).filter(question => !answeredIds.includes(question.id))
+    const unansweredIds = Object.keys(questions).filter(question => !answeredIds.includes(question))
+    console.log(unansweredIds)
     return {
         questionsIds: Object.keys(questions),
         answeredIds,
