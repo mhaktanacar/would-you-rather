@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, Col, Container, InputGroup, Row, Nav } from 'react-bootstrap'
+import { Card, Col, Container, InputGroup, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import Link from 'react-router-dom/Link'
 

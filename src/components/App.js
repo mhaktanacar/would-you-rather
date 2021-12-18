@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { handleInitialData } from '../actions/shared'
-import QuestionContainer from './QuestionContainer'
 import LeaderBoard from './LeaderBoard'
-import NewQuestion from './NewQuestion'
 import LogIn from './LogIn'
 import Navigation from './Navigation'
+import NewQuestion from './NewQuestion'
 import Question from './Question'
-import { Container, Row, Col } from 'react-bootstrap'
+import QuestionContainer from './QuestionContainer'
 
 class App extends Component {
   componentDidMount() {
