@@ -17,3 +17,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The data for mocked backend server is provided by Udacity [`_DATA.js`](src/utils/_DATA.js).
 
+Project can be reached from this url: https://vigorous-mcclintock-a69590.netlify.app/
