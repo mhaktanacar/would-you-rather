@@ -36,7 +36,7 @@ class AnsweredQuestion extends Component {
                             </Card.Text>
                         </Card.Body>
                         <Card.Body>
-                        <Link to={`/question/${this.props.question.id}`}>View Poll</Link>
+                        <Link to={`/questions/${this.props.question.id}`}>View Poll</Link>
                         </Card.Body>
                     </Card>
                 </form>

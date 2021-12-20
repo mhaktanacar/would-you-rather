@@ -19,7 +19,7 @@ class Navigation extends Component {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/new">New Question</Nav.Link>
+                            <Nav.Link as={Link} to="/add">New Question</Nav.Link>
                             <Nav.Link as={Link} to="/leaderboard">Leader Board</Nav.Link>
                         </Nav>
                         <Nav>

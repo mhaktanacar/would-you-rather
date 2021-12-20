@@ -9,7 +9,7 @@ class AnsweredQuestions extends Component {
         return (
             <Container>
                 <Row>
-                    <Col></Col>O
+                    <Col></Col>
                     <Col md="auto">
                         <ol>
                             {this.props.answeredIds.map(id => (

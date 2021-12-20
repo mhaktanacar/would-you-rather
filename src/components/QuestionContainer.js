@@ -10,7 +10,7 @@ class QuestionContainer extends Component {
         return (
             <div class="App">
                 <br></br>
-                <Accordion>
+                <Accordion defaultActiveKey="2">
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>Answered Questions</Accordion.Header>
                         <Accordion.Body>
@@ -31,9 +31,17 @@ class QuestionContainer extends Component {
 
 function mapStateToProps({ questions, authedUser, users }) {
     const user = users[authedUser];
-    const answeredIds = user ? Object.keys(user['answers']) : [];
-    const unansweredIds = Object.keys(questions).filter(question => !answeredIds.includes(question))
-    console.log(unansweredIds)
+    const answeredIdList = user ? Object.keys(user['answers']) : [];
+    const answeredIds = Object.keys(questions).filter(question => answeredIdList.includes(question)).sort((idOne, idTwo) => {
+        const timestampOne = questions[idOne].timestamp;
+        const timestampTwo = questions[idTwo].timestamp;
+        return timestampTwo - timestampOne 
+    });
+    const unansweredIds = Object.keys(questions).filter(question => !answeredIds.includes(question)).sort((idOne, idTwo) => {
+        const timestampOne = questions[idOne].timestamp;
+        const timestampTwo = questions[idTwo].timestamp;
+        return timestampTwo - timestampOne 
+    });
     return {
         questionsIds: Object.keys(questions),
         answeredIds,
